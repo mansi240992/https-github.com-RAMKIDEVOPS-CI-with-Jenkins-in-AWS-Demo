@@ -9,7 +9,7 @@ pipeline {
       stage('checkout') {
            steps {
              
-                git branch: 'master', url: 'https://github.com/devops4solutions/CI-CD-using-Docker.git'
+                git branch: 'master', url: 'https://github.com/mansi240992/https-github.com-RAMKIDEVOPS-CI-with-Jenkins-in-AWS-Demo.git'
              
           }
         }
