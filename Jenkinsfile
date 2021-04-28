@@ -20,7 +20,7 @@ pipeline {
               
                 sh 'docker build -t samplewebapp:latest -f /var/lib/jenkins/workspace/docker_new/Dockerfile .' 
                 sh 'docker tag samplewebapp mansi1992/samplewebapp:latest'
-                //sh 'docker tag samplewebapp nikhilnidhi/samplewebapp:$BUILD_NUMBER'
+                
                
           }
         }
@@ -30,7 +30,7 @@ pipeline {
             steps {
         withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
           sh  'docker push mansi1992/samplewebapp:latest'
-        //  sh  'docker push nikhilnidhi/samplewebapp:$BUILD_NUMBER' 
+        
         }
                   
           }
